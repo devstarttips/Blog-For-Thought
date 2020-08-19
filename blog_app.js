@@ -6,10 +6,19 @@ var mongoose   = require('mongoose');
 var expressSanitizer = require("express-sanitizer");
 
 
-//CONFIGURE MONGOOSE
-  mongoose.connect('mongodb://localhost:27017/restful_blog_app', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+//CONFIGURE MONGO ATLAS
+mongoose.connect('mongodb+srv://devstart:devstart@cluster0.b8zys.mongodb.net/cluster0?retryWrites=true&w=majority', {
+useNewUrlParser: true,
+useCreateIndex: true,
+useUnifiedTopology: true
+})
+.then(() => console.log('Connected to DB!'))
+.catch(error => console.log(error.message));
+
+//CONFIGURE MONGODB LOCAL
+  //mongoose.connect('mongodb://localhost:27017/restful_blog_app', {
+  //useNewUrlParser: true,
+ // useUnifiedTopology: true
 })
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
