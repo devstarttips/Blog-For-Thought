@@ -133,5 +133,5 @@ app.delete("/blogs/:id", function(req, res){
 
 //SERVER LISTENING FOR LOCAL, OR PORT FOR WHEN DEPLOYED...
 app.listen(process.env.PORT || 3000,function(){
-    console.log("Server listening on port 3000.")
+    console.log("Server listening on port 3000.") 
 });
